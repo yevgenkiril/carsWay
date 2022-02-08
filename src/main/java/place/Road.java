@@ -13,10 +13,8 @@ public class Road extends Place{
     }
 
     @Override
-    public void visit(Car car) throws NotEnoughFuelException, ShouldBeRefuelException {
-        if (car.getCurrentCapacity() == 0) {
-            throw new ShouldBeRefuelException();
-        }
+    public void visit(Car car) throws NotEnoughFuelException {
+
         if (car.getCurrentCapacity() < length) {
             throw new NotEnoughFuelException();
         }

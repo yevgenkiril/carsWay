@@ -2,10 +2,14 @@ import car.Car;
 import car.ElectroCar;
 import car.GasCar;
 import place.Finish;
+import place.Place;
 import place.Road;
 import refuel.GasRefuel;
 import refuel.MixedRefuel;
 import way.Way;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class Main {
 

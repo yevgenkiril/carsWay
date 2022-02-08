@@ -23,6 +23,7 @@ int пройденнійПуть = 0;
         return super.add(place);
     }
 
+
     public void ride(Car[] cars) {
         int carsSize = cars.length;
 
