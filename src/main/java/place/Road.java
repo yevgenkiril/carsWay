@@ -3,6 +3,7 @@ package place;
 
 import car.Car;
 import exceptions.NotEnoughFuelException;
+import exceptions.ShouldBeRefuelException;
 
 public class Road extends Place{
     private int length;
@@ -12,10 +13,14 @@ public class Road extends Place{
     }
 
     @Override
-    public void visit(Car car) throws NotEnoughFuelException {
+    public void visit(Car car) throws NotEnoughFuelException, ShouldBeRefuelException {
+        if (car.getCurrentCapacity() == 0) {
+            throw new ShouldBeRefuelException();
+        }
         if (car.getCurrentCapacity() < length) {
             throw new NotEnoughFuelException();
         }
+
 
         car.setCurrentCapacity(car.getCurrentCapacity() - this.length);
         System.out.println("Car " + car.getClass() + " visited road with length " + length + " and capacity = " + car.getCurrentCapacity());

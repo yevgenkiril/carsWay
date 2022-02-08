@@ -4,6 +4,7 @@ package way;
 import car.Car;
 import exceptions.NotEnoughFuelException;
 import exceptions.NotMyRefuelException;
+import exceptions.ShouldBeRefuelException;
 import place.Place;
 
 import java.util.ArrayList;
@@ -13,8 +14,10 @@ public class Way extends ArrayList<Place> {
     @Override
     public boolean add(Place place) {
 /*        System.out.println(size());
+int пройденнійПуть = 0;
         for (int i = size(); i >= 0; i--) {
             this.get(i) instanceof Refuel
+            пройденній+= this.get(i)ю
         }*/
 
         return super.add(place);
